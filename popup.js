@@ -16,6 +16,7 @@ document.getElementById("checkBtn").addEventListener("click", () => {
     if(!url.includes("://")) {
       warnings.push("⚠ URL is missing protocol (http:// or https://)");
     }
+
     let domainParts = url.split("//")[1].split(".");
     if (domainParts.length > 4) {
       warnings.push("⚠ Too many subdomains");
